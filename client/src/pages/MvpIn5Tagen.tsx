@@ -379,7 +379,7 @@ export default function MvpIn5Tagen() {
             </h2>
             
             <div className="card-glass p-8 mb-8">
-              <div className="text-5xl font-bold text-[#1F63FB] mb-2">ab CHF 15'000</div>
+              <div className="text-5xl font-bold text-[#1F63FB] mb-2">ab CHF 8'000</div>
               <div className="text-gray-500 mb-6">für einen 5-Tage Sprint</div>
               
               <div className="text-left space-y-3 mb-8">
