@@ -75,12 +75,12 @@ const techPartners = [
 
 // Delivery Partners
 const deliveryPartners = [
-  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/NlYPrcvYmzIrkWwR.png" },
-  { name: "Break", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/owSHBNdPDuRMNlPY.png" },
-  { name: "Bitlex", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/qfLGXdXJnFdFghwq.png" },
-  { name: "Compu-Trade", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/tMdkEsrdrnBVfbnU.png" },
-  { name: "Nexsolve", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/zDNGSxJFmJRfpVcu.png" },
-  { name: "Nablify", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/wifQhTQOGtDQYfmJ.png" },
+  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/NlYPrcvYmzIrkWwR.png", darkBg: false },
+  { name: "Break", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/owSHBNdPDuRMNlPY.png", darkBg: true },
+  { name: "Bitlex", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/qfLGXdXJnFdFghwq.png", darkBg: true },
+  { name: "Compu-Trade", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/tMdkEsrdrnBVfbnU.png", darkBg: false },
+  { name: "Nexsolve", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/zDNGSxJFmJRfpVcu.png", darkBg: true },
+  { name: "Nablify", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/wifQhTQOGtDQYfmJ.png", darkBg: false },
 ];
 
 const capabilities = [
@@ -279,7 +279,9 @@ export default function Partner() {
               <motion.div
                 key={partner.name}
                 variants={fadeInUp}
-                className="bg-gray-50 rounded-xl p-6 flex items-center justify-center h-24"
+                className={`rounded-xl p-6 flex items-center justify-center h-24 ${
+                  partner.darkBg ? 'bg-[#090938]' : 'bg-gray-50'
+                }`}
               >
                 <img
                   src={partner.logo}

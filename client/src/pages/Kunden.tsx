@@ -15,29 +15,29 @@ const staggerContainer = {
 
 // Alle Kunden und Partner Logos
 const clients = [
-  { name: "Post", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ruJmIbKgKWDpwnIc.png" },
-  { name: "Bridge", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/jgBtnbfLeuUHvcYe.png" },
-  { name: "Omnisens", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bwArFvyGRqsnkGuL.png" },
-  { name: "blupli", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/XKYPgrmKGAJakOvR.png" },
-  { name: "capvero", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/BGkleQWZWLRNRjgm.png" },
-  { name: "Naka", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/WlfuMHGyTUBnCypw.png" },
-  { name: "flygreen24", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ycindkTTVcblKHCW.png" },
-  { name: "Tepa swiss", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/csBNDDlhguASxNoG.png" },
-  { name: "helium", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bUMEwoTpEBgCBCSZ.png" },
-  { name: "Nablify", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/wifQhTQOGtDQYfmJ.png" },
-  { name: "Vikram", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/okpUHZIqVnGDhflI.png" },
-  { name: "HOS", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/fuzXnPiDedInBDzh.png" },
-  { name: "ccfe", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/HsebKBRpivtElVYj.png" },
-  { name: "digitalminds", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/rfNzuEgPTjMUdlNR.png" },
-  { name: "hwz", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/BcdLIJQvZoxWfGhq.png" },
-  { name: "st.jodern Kellerei", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/VmUdgRochvopTvdm.png" },
-  { name: "Edgewind", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/hTWKJZdzSLjrBMDp.png" },
-  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/NlYPrcvYmzIrkWwR.png" },
-  { name: "Break", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/owSHBNdPDuRMNlPY.png" },
-  { name: "Bitlex", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/qfLGXdXJnFdFghwq.png" },
-  { name: "Computrade", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/tMdkEsrdrnBVfbnU.png" },
-  { name: "Nexsolve", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/zDNGSxJFmJRfpVcu.png" },
-  { name: "8Horses", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ZzoGqTnqdPZBRYag.png" },
+  { name: "Post", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ruJmIbKgKWDpwnIc.png", darkBg: false },
+  { name: "Bridge", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/jgBtnbfLeuUHvcYe.png", darkBg: false },
+  { name: "Omnisens", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bwArFvyGRqsnkGuL.png", darkBg: false },
+  { name: "blupli", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/XKYPgrmKGAJakOvR.png", darkBg: false },
+  { name: "capvero", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/BGkleQWZWLRNRjgm.png", darkBg: false },
+  { name: "Naka", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/WlfuMHGyTUBnCypw.png", darkBg: false },
+  { name: "flygreen24", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ycindkTTVcblKHCW.png", darkBg: false },
+  { name: "Tepa swiss", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/csBNDDlhguASxNoG.png", darkBg: false },
+  { name: "helium", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bUMEwoTpEBgCBCSZ.png", darkBg: false },
+  { name: "Nablify", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/wifQhTQOGtDQYfmJ.png", darkBg: false },
+  { name: "Vikram", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/okpUHZIqVnGDhflI.png", darkBg: false },
+  { name: "HOS", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/fuzXnPiDedInBDzh.png", darkBg: false },
+  { name: "ccfe", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/HsebKBRpivtElVYj.png", darkBg: false },
+  { name: "digitalminds", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/rfNzuEgPTjMUdlNR.png", darkBg: false },
+  { name: "hwz", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/BcdLIJQvZoxWfGhq.png", darkBg: false },
+  { name: "st.jodern Kellerei", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/VmUdgRochvopTvdm.png", darkBg: false },
+  { name: "Edgewind", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/hTWKJZdzSLjrBMDp.png", darkBg: false },
+  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/NlYPrcvYmzIrkWwR.png", darkBg: false },
+  { name: "Break", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/owSHBNdPDuRMNlPY.png", darkBg: true },
+  { name: "Bitlex", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/qfLGXdXJnFdFghwq.png", darkBg: true },
+  { name: "Computrade", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/tMdkEsrdrnBVfbnU.png", darkBg: false },
+  { name: "Nexsolve", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/zDNGSxJFmJRfpVcu.png", darkBg: true },
+  { name: "8Horses", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ZzoGqTnqdPZBRYag.png", darkBg: false },
 ];
 
 const testimonials = [
@@ -137,11 +137,17 @@ export default function Kunden() {
                 variants={fadeInUp}
                 className="group"
               >
-                <div className="bg-gray-50 rounded-xl p-6 h-24 flex items-center justify-center group-hover:bg-white group-hover:shadow-lg transition-all duration-300">
+                <div className={`rounded-xl p-6 h-24 flex items-center justify-center transition-all duration-300 ${
+                  client.darkBg 
+                    ? 'bg-[#090938] group-hover:bg-[#241D54] group-hover:shadow-lg' 
+                    : 'bg-gray-50 group-hover:bg-white group-hover:shadow-lg'
+                }`}>
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="max-h-12 max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className={`max-h-12 max-w-full object-contain transition-all duration-300 ${
+                      client.darkBg ? '' : 'grayscale group-hover:grayscale-0'
+                    }`}
                   />
                 </div>
               </motion.div>
