@@ -51,9 +51,9 @@ export default function Kontakt() {
   ];
 
   const contactInfo = [
-    { icon: Mail, label: "E-Mail", value: "info@rubicon.ch", href: "mailto:info@rubicon.ch" },
-    { icon: Phone, label: "Telefon", value: "+41 31 000 00 00", href: "tel:+41310000000" },
-    { icon: MapPin, label: "Adresse", value: "Bern, Schweiz", href: "#" }
+    { icon: Mail, label: "E-Mail", value: "info@rubicon-world.ch", href: "mailto:info@rubicon-world.ch" },
+    { icon: Phone, label: "Telefon", value: "+41 79 364 36 95", href: "tel:+41793643695" },
+    { icon: MapPin, label: "Adresse", value: "Bernapark 28, 3066 Stettlen", href: "https://maps.google.com/?q=Bernapark+28+3066+Stettlen" }
   ];
 
   if (isSubmitted) {
@@ -153,7 +153,7 @@ export default function Kontakt() {
                     Buchen Sie direkt einen 30-minütigen Kennenlern-Call.
                   </p>
                   <a 
-                    href="mailto:info@rubicon.ch?subject=Terminanfrage" 
+                    href="mailto:info@rubicon-world.ch?subject=Terminanfrage" 
                     className="text-[#4ED9DE] font-medium hover:underline text-sm"
                   >
                     Termin anfragen →

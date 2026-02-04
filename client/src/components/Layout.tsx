@@ -231,8 +231,9 @@ function Footer() {
             <h4 className="text-white font-semibold mb-4">Kontakt</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li>Rubicon Schweiz</li>
-              <li>Bern, Schweiz</li>
-              <li><a href="mailto:info@rubicon.ch" className="hover:text-[#4ED9DE] transition-colors">info@rubicon.ch</a></li>
+              <li>Bernapark 28, 3066 Stettlen</li>
+              <li><a href="mailto:info@rubicon-world.ch" className="hover:text-[#4ED9DE] transition-colors">info@rubicon-world.ch</a></li>
+              <li><a href="tel:+41793643695" className="hover:text-[#4ED9DE] transition-colors">+41 79 364 36 95</a></li>
             </ul>
             <Link href="/kontakt" className="inline-block mt-4 text-[#1F63FB] hover:text-[#4ED9DE] transition-colors text-sm font-medium">
               Termin vereinbaren →
