@@ -15,6 +15,7 @@ import Partneranfrage from "./pages/Partneranfrage";
 import Kontakt from "./pages/Kontakt";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function Router() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <WhatsAppButton />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

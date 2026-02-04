@@ -450,14 +450,18 @@ function ClientsSection() {
           <p className="text-gray-500 text-sm uppercase tracking-wider mb-8">
             Vertraut von führenden Schweizer Unternehmen
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
             {CLIENT_LOGOS.map((client) => (
-              <img
+              <div 
                 key={client.name}
-                src={client.logo}
-                alt={client.name}
-                className="h-10 md:h-12 w-auto grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
-              />
+                className="h-12 w-24 flex items-center justify-center"
+              >
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="h-8 w-auto max-w-[80px] object-contain grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+                />
+              </div>
             ))}
           </div>
         </motion.div>

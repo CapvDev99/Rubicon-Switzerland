@@ -137,7 +137,7 @@ export default function Kunden() {
                 variants={fadeInUp}
                 className="group"
               >
-                <div className={`rounded-xl p-6 h-24 flex items-center justify-center transition-all duration-300 ${
+                <div className={`rounded-xl p-4 h-20 w-full flex items-center justify-center transition-all duration-300 ${
                   client.darkBg 
                     ? 'bg-[#090938] group-hover:bg-[#241D54] group-hover:shadow-lg' 
                     : 'bg-gray-50 group-hover:bg-white group-hover:shadow-lg'
@@ -145,7 +145,7 @@ export default function Kunden() {
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className={`max-h-12 max-w-full object-contain transition-all duration-300 ${
+                    className={`h-10 w-auto max-w-[120px] object-contain transition-all duration-300 ${
                       client.darkBg ? '' : 'grayscale group-hover:grayscale-0'
                     }`}
                   />
