@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bVBNCxOsDYFxBXFN.png";
+const LOGO_WHITE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bVBNCxOsDYFxBXFN.png";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -22,6 +23,20 @@ const navItems = [
   { label: "Kontakt", href: "/kontakt" },
 ];
 
+// Custom Link component that scrolls to top
+function ScrollLink({ href, children, className, onClick }: { href: string; children: React.ReactNode; className?: string; onClick?: () => void }) {
+  const handleClick = (e: React.MouseEvent) => {
+    if (onClick) onClick();
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
+  return (
+    <Link href={href} className={className} onClick={handleClick}>
+      {children}
+    </Link>
+  );
+}
+
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -39,7 +54,13 @@ function Header() {
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setOpenDropdown(null);
+    // Scroll to top on location change
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }, [location]);
+
+  // Determine if we're on a page with dark hero (Home page)
+  const isHomePage = location === "/";
+  const showWhiteHeader = !isScrolled && isHomePage;
 
   return (
     <header
@@ -51,10 +72,14 @@ function Header() {
     >
       <div className="container">
         <nav className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="Rubicon Schweiz" className="h-10 w-auto" />
-          </Link>
+          {/* Logo - larger and white when on dark background */}
+          <ScrollLink href="/" className="flex items-center gap-3">
+            <img 
+              src={LOGO_URL} 
+              alt="Rubicon Schweiz" 
+              className={`h-12 w-auto transition-all duration-300 ${showWhiteHeader ? 'brightness-0 invert' : ''}`} 
+            />
+          </ScrollLink>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
@@ -65,19 +90,19 @@ function Header() {
                 onMouseEnter={() => item.children && setOpenDropdown(item.label)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                <Link
+                <ScrollLink
                   href={item.href}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${
                     location === item.href || (item.children && item.children.some(c => c.href === location))
-                      ? "text-[#1F63FB]"
-                      : isScrolled
-                      ? "text-[#090938] hover:text-[#1F63FB]"
+                      ? showWhiteHeader ? "text-white" : "text-[#1F63FB]"
+                      : showWhiteHeader
+                      ? "text-white/90 hover:text-white"
                       : "text-[#090938] hover:text-[#1F63FB]"
                   }`}
                 >
                   {item.label}
                   {item.children && <ChevronDown className="w-4 h-4" />}
-                </Link>
+                </ScrollLink>
                 
                 {/* Dropdown */}
                 <AnimatePresence>
@@ -90,7 +115,7 @@ function Header() {
                       className="absolute top-full left-0 mt-1 py-2 bg-white rounded-xl shadow-xl shadow-[#090938]/10 min-w-[200px] border border-gray-100"
                     >
                       {item.children.map((child) => (
-                        <Link
+                        <ScrollLink
                           key={child.href}
                           href={child.href}
                           className={`block px-4 py-2 text-sm transition-colors ${
@@ -100,7 +125,7 @@ function Header() {
                           }`}
                         >
                           {child.label}
-                        </Link>
+                        </ScrollLink>
                       ))}
                     </motion.div>
                   )}
@@ -111,18 +136,22 @@ function Header() {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <Link
+            <ScrollLink
               href="/kontakt"
-              className="btn-primary text-sm"
+              className={`text-sm px-5 py-2.5 rounded-lg font-medium transition-all ${
+                showWhiteHeader
+                  ? "bg-white text-[#090938] hover:bg-white/90"
+                  : "btn-primary"
+              }`}
             >
               Get in touch
-            </Link>
+            </ScrollLink>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-[#090938]"
+            className={`lg:hidden p-2 transition-colors ${showWhiteHeader ? 'text-white' : 'text-[#090938]'}`}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -141,7 +170,7 @@ function Header() {
             <div className="container py-4">
               {navItems.map((item) => (
                 <div key={item.href}>
-                  <Link
+                  <ScrollLink
                     href={item.href}
                     className={`block py-3 text-base font-medium ${
                       location === item.href
@@ -150,11 +179,11 @@ function Header() {
                     }`}
                   >
                     {item.label}
-                  </Link>
+                  </ScrollLink>
                   {item.children && (
                     <div className="pl-4 border-l-2 border-gray-100">
                       {item.children.map((child) => (
-                        <Link
+                        <ScrollLink
                           key={child.href}
                           href={child.href}
                           className={`block py-2 text-sm ${
@@ -164,18 +193,18 @@ function Header() {
                           }`}
                         >
                           {child.label}
-                        </Link>
+                        </ScrollLink>
                       ))}
                     </div>
                   )}
                 </div>
               ))}
-              <Link
+              <ScrollLink
                 href="/kontakt"
                 className="btn-primary w-full text-center mt-4 block"
               >
                 Get in touch
-              </Link>
+              </ScrollLink>
             </div>
           </motion.div>
         )}
@@ -194,7 +223,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <img src={LOGO_URL} alt="Rubicon Schweiz" className="h-10 w-auto mb-6 brightness-0 invert" />
+            <img src={LOGO_URL} alt="Rubicon Schweiz" className="h-12 w-auto mb-6 brightness-0 invert" />
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Schweizer Qualität. Moderne Technologien. Messbare Resultate.
             </p>
@@ -209,9 +238,9 @@ function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Leistungen</h4>
             <ul className="space-y-3">
-              <li><Link href="/services" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">Services & Vorgehen</Link></li>
-              <li><Link href="/mvp-in-5-tagen" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">5-Tage MVP</Link></li>
-              <li><Link href="/partner" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">Partner & Kompetenzen</Link></li>
+              <li><ScrollLink href="/services" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">Services & Vorgehen</ScrollLink></li>
+              <li><ScrollLink href="/mvp-in-5-tagen" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">5-Tage MVP</ScrollLink></li>
+              <li><ScrollLink href="/partner" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">Partner & Kompetenzen</ScrollLink></li>
             </ul>
           </div>
 
@@ -219,10 +248,10 @@ function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Unternehmen</h4>
             <ul className="space-y-3">
-              <li><Link href="/ueber-uns" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">Über uns</Link></li>
-              <li><Link href="/kunden" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">Kunden</Link></li>
-              <li><Link href="/karriere" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">Karriere</Link></li>
-              <li><Link href="/partneranfrage" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">Partneranfrage</Link></li>
+              <li><ScrollLink href="/ueber-uns" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">Über uns</ScrollLink></li>
+              <li><ScrollLink href="/kunden" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">Kunden</ScrollLink></li>
+              <li><ScrollLink href="/karriere" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">Karriere</ScrollLink></li>
+              <li><ScrollLink href="/partneranfrage" className="text-gray-400 hover:text-[#4ED9DE] transition-colors text-sm">Partneranfrage</ScrollLink></li>
             </ul>
           </div>
 
@@ -235,9 +264,9 @@ function Footer() {
               <li><a href="mailto:info@rubicon-world.ch" className="hover:text-[#4ED9DE] transition-colors">info@rubicon-world.ch</a></li>
               <li><a href="tel:+41793643695" className="hover:text-[#4ED9DE] transition-colors">+41 79 364 36 95</a></li>
             </ul>
-            <Link href="/kontakt" className="inline-block mt-4 text-[#1F63FB] hover:text-[#4ED9DE] transition-colors text-sm font-medium">
+            <ScrollLink href="/kontakt" className="inline-block mt-4 text-[#1F63FB] hover:text-[#4ED9DE] transition-colors text-sm font-medium">
               Termin vereinbaren →
-            </Link>
+            </ScrollLink>
           </div>
         </div>
       </div>
@@ -250,8 +279,8 @@ function Footer() {
               © {currentYear} Rubicon Schweiz. Alle Rechte vorbehalten.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-gray-500 hover:text-gray-400 text-sm">Impressum</a>
-              <a href="#" className="text-gray-500 hover:text-gray-400 text-sm">Datenschutz</a>
+              <ScrollLink href="/impressum" className="text-gray-500 hover:text-gray-400 text-sm">Impressum</ScrollLink>
+              <ScrollLink href="/datenschutz" className="text-gray-500 hover:text-gray-400 text-sm">Datenschutz</ScrollLink>
             </div>
           </div>
         </div>

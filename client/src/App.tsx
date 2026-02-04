@@ -13,6 +13,8 @@ import UeberUns from "./pages/UeberUns";
 import Karriere from "./pages/Karriere";
 import Partneranfrage from "./pages/Partneranfrage";
 import Kontakt from "./pages/Kontakt";
+import Impressum from "./pages/Impressum";
+import Datenschutz from "./pages/Datenschutz";
 
 function Router() {
   return (
@@ -26,6 +28,8 @@ function Router() {
       <Route path="/karriere" component={Karriere} />
       <Route path="/partneranfrage" component={Partneranfrage} />
       <Route path="/kontakt" component={Kontakt} />
+      <Route path="/impressum" component={Impressum} />
+      <Route path="/datenschutz" component={Datenschutz} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

@@ -283,7 +283,7 @@ export default function Services() {
                 Schweizer Governance, globale Skalierbarkeit
               </h2>
               <p className="text-gray-300">
-                Strategische Leads und Projektmanager vor Ort, kombiniert mit einem Nearshore-Team für effiziente Umsetzung.
+                Strategische Leads und Projektmanager vor Ort, kombiniert mit einem hybriden Team für effiziente, global skalierbare Umsetzung.
               </p>
             </div>
           </div>
@@ -366,7 +366,7 @@ export default function Services() {
             className="mt-8 p-6 bg-[#1F63FB]/5 rounded-xl border border-[#1F63FB]/20"
           >
             <p className="text-center text-[#090938]">
-              <strong>Transparenz-Versprechen:</strong> Alle Preise sind vollständig inklusive. Schweizer Governance und Oversight zum Nearshore-Preis. Keine versteckten Aufschläge.
+              <strong>Transparenz-Versprechen:</strong> Alle Preise sind vollständig inklusive. Schweizer Governance und Oversight durch hybride Skalierung. Keine versteckten Aufschläge.
             </p>
           </motion.div>
         </div>

@@ -133,8 +133,8 @@ export default function Partneranfrage() {
                   <p className="text-gray-600 text-sm mb-4">
                     Kontaktieren Sie uns direkt für ein unverbindliches Gespräch.
                   </p>
-                  <a href="mailto:partner@rubicon.ch" className="text-[#1F63FB] font-medium hover:underline">
-                    partner@rubicon.ch
+                  <a href="mailto:partner@rubicon-world.ch" className="text-[#1F63FB] font-medium hover:underline">
+                    partner@rubicon-world.ch
                   </a>
                 </div>
               </div>

@@ -258,7 +258,7 @@ export default function Partner() {
               Delivery-Partner
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Unser Nearshore-Netzwerk ermöglicht effiziente Umsetzung bei gleichzeitiger 
+              Unsere hybride Skalierung ermöglicht effiziente Umsetzung bei gleichzeitiger 
               Schweizer Qualitätskontrolle.
             </p>
           </motion.div>
@@ -293,7 +293,7 @@ export default function Partner() {
           >
             {[
               { title: "Schweizer Governance", desc: "Projektleitung und Qualitätskontrolle vor Ort" },
-              { title: "Nearshore Delivery", desc: "Effiziente Umsetzung durch erfahrene Teams" },
+              { title: "Globale Skalierbarkeit", desc: "Effiziente Umsetzung durch erfahrene Teams" },
               { title: "Transparente Preise", desc: "Keine versteckten Kosten oder Aufschläge" }
             ].map((item) => (
               <div key={item.title} className="text-center">

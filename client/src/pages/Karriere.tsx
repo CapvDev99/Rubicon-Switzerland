@@ -45,25 +45,18 @@ export default function Karriere() {
       description: "Du baust moderne Data Platforms mit Databricks, Snowflake und Cloud-Native Technologien."
     },
     {
-      title: "Cloud Solutions Architect",
-      location: "Bern / Remote",
-      type: "Vollzeit",
-      department: "Cloud",
-      description: "Du designst und implementierst Cloud-Architekturen auf AWS, Azure oder GCP."
-    },
-    {
-      title: "Full Stack Developer",
-      location: "Bern / Remote",
-      type: "Vollzeit",
-      department: "Development",
-      description: "Du entwickelst moderne Webanwendungen mit React, TypeScript und Node.js."
-    },
-    {
       title: "AI/ML Engineer",
       location: "Bern / Remote",
       type: "Vollzeit",
       department: "AI & Innovation",
       description: "Du bringst AI-Lösungen in die Produktion – von LLMs bis zu klassischem ML."
+    },
+    {
+      title: "Initiativbewerbung",
+      location: "Bern / Remote",
+      type: "Vollzeit / Teilzeit",
+      department: "Alle Bereiche",
+      description: "Du hast Talent und Leidenschaft für Technologie? Wir freuen uns auf deine Bewerbung!"
     }
   ];
 

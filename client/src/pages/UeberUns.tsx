@@ -41,12 +41,14 @@ export default function UeberUns() {
   ];
 
   const milestones = [
-    { year: "2014", event: "Gründung in Bern" },
-    { year: "2016", event: "Erste Cloud-Projekte" },
+    { year: "2014", event: "Gründung der Rubicon durch zwei Entwickler" },
+    { year: "2016", event: "Cloudprojekte und MLL" },
     { year: "2018", event: "ISO 27001 Zertifizierung" },
+    { year: "2019", event: "Gründung der Digital Minds und Blockchainprojekte" },
     { year: "2020", event: "Expansion Data & AI" },
-    { year: "2022", event: "Nearshore-Partnerschaft" },
-    { year: "2024", event: "50+ erfolgreiche Projekte" }
+    { year: "2023", event: "Gründung der NolX" },
+    { year: "2024", event: "Fusion zu Rubicon" },
+    { year: "2025", event: "50+ erfolgreiche Projekte" }
   ];
 
   return (
@@ -217,7 +219,7 @@ export default function UeberUns() {
               <p className="text-gray-300 text-lg mb-8 leading-relaxed">
                 Unser Hauptsitz in Bern ist das Herz unserer Aktivitäten. Von hier aus 
                 steuern wir Projekte in der ganzen Schweiz und koordinieren unser 
-                internationales Nearshore-Netzwerk.
+                hybrides, global skalierbares Netzwerk.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -230,7 +232,7 @@ export default function UeberUns() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Zap className="w-5 h-5 text-[#FED438]" />
-                  <span className="text-gray-300">Nearshore-Teams für effiziente Umsetzung</span>
+                  <span className="text-gray-300">Hybride Teams für effiziente Umsetzung</span>
                 </div>
               </div>
             </motion.div>

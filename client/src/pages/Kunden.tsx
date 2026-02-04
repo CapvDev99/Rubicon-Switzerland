@@ -14,13 +14,14 @@ const staggerContainer = {
 };
 
 // Client Logos
+// Client Logos - Post in der Mitte platziert
 const clients = [
-  { name: "Post", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/GqwUSNGYgfXWjMqt.png", industry: "Logistik" },
   { name: "HWZ", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/DgAOekcLeaneQEhg.png", industry: "Bildung" },
   { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/klucEFFLNdEVBcuq.png", industry: "Software" },
   { name: "Omnisens", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/RxgXoDSICvXsdAfZ.png", industry: "Technologie" },
   { name: "Bridge", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/csSBSBVNPwLaXLHF.png", industry: "Consulting" },
   { name: "Capvero", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/nhBWPyISofpBzUZZ.png", industry: "Finance" },
+  { name: "Post", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/GqwUSNGYgfXWjMqt.png", industry: "Logistik" },
   { name: "Edgewind", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/wNjogPpTFkLECwdw.png", industry: "Energie" },
   { name: "CCFE", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/hPFsKZNnoVTVWqGH.png", industry: "Forschung" },
   { name: "Blupli", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/AWrKMBPnttSUYQXa.png", industry: "Tech" },
@@ -83,7 +84,7 @@ export default function Kunden() {
             variants={fadeInUp}
             className="max-w-3xl"
           >
-            <span className="badge-cyan inline-block mb-4">Unsere Kunden</span>
+            <span className="badge-cyan inline-block mb-4">Kunden und Partner</span>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Vertraut von führenden Schweizer Unternehmen
             </h1>
@@ -106,7 +107,7 @@ export default function Kunden() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#090938] mb-4">
-              Unsere Kunden
+              Kunden und Partner
             </h2>
             <p className="text-gray-600 text-lg">
               Eine Auswahl der Unternehmen, mit denen wir zusammenarbeiten.
