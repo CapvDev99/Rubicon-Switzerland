@@ -31,14 +31,14 @@ const TECH_PARTNERS = [
   { name: "MS Fabric", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/pfcBjgKzBcbjSpqi.png" },
 ];
 
-// Client Logos
+// Client Logos - Auswahl für die Startseite
 const CLIENT_LOGOS = [
-  { name: "Post", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/GqwUSNGYgfXWjMqt.png" },
-  { name: "HWZ", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/DgAOekcLeaneQEhg.png" },
-  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/klucEFFLNdEVBcuq.png" },
-  { name: "Omnisens", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/RxgXoDSICvXsdAfZ.png" },
-  { name: "Bridge", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/csSBSBVNPwLaXLHF.png" },
-  { name: "Capvero", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/nhBWPyISofpBzUZZ.png" },
+  { name: "Post", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ruJmIbKgKWDpwnIc.png" },
+  { name: "hwz", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/BcdLIJQvZoxWfGhq.png" },
+  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/NlYPrcvYmzIrkWwR.png" },
+  { name: "Omnisens", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bwArFvyGRqsnkGuL.png" },
+  { name: "Bridge", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/jgBtnbfLeuUHvcYe.png" },
+  { name: "capvero", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/BGkleQWZWLRNRjgm.png" },
 ];
 
 // Animation variants

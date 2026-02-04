@@ -13,21 +13,31 @@ const staggerContainer = {
   visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
 };
 
-// Client Logos
-// Client Logos - Post in der Mitte platziert
+// Alle Kunden und Partner Logos
 const clients = [
-  { name: "HWZ", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/DgAOekcLeaneQEhg.png", industry: "Bildung" },
-  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/klucEFFLNdEVBcuq.png", industry: "Software" },
-  { name: "Omnisens", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/RxgXoDSICvXsdAfZ.png", industry: "Technologie" },
-  { name: "Bridge", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/csSBSBVNPwLaXLHF.png", industry: "Consulting" },
-  { name: "Capvero", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/nhBWPyISofpBzUZZ.png", industry: "Finance" },
-  { name: "Post", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/GqwUSNGYgfXWjMqt.png", industry: "Logistik" },
-  { name: "Edgewind", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/wNjogPpTFkLECwdw.png", industry: "Energie" },
-  { name: "CCFE", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/hPFsKZNnoVTVWqGH.png", industry: "Forschung" },
-  { name: "Blupli", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/AWrKMBPnttSUYQXa.png", industry: "Tech" },
-  { name: "Naka", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/oiYDpICydYIzKEkw.png", industry: "Startup" },
-  { name: "Nablify", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/IxIcNVUHmTECRYjr.png", industry: "Tech" },
-  { name: "HOS", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/HrNnxNxIrMcRoZDg.png", industry: "Services" },
+  { name: "Post", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ruJmIbKgKWDpwnIc.png" },
+  { name: "Bridge", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/jgBtnbfLeuUHvcYe.png" },
+  { name: "Omnisens", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bwArFvyGRqsnkGuL.png" },
+  { name: "blupli", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/XKYPgrmKGAJakOvR.png" },
+  { name: "capvero", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/BGkleQWZWLRNRjgm.png" },
+  { name: "Naka", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/WlfuMHGyTUBnCypw.png" },
+  { name: "flygreen24", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ycindkTTVcblKHCW.png" },
+  { name: "Tepa swiss", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/csBNDDlhguASxNoG.png" },
+  { name: "helium", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bUMEwoTpEBgCBCSZ.png" },
+  { name: "Nablify", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/wifQhTQOGtDQYfmJ.png" },
+  { name: "Vikram", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/okpUHZIqVnGDhflI.png" },
+  { name: "HOS", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/fuzXnPiDedInBDzh.png" },
+  { name: "ccfe", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/HsebKBRpivtElVYj.png" },
+  { name: "digitalminds", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/rfNzuEgPTjMUdlNR.png" },
+  { name: "hwz", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/BcdLIJQvZoxWfGhq.png" },
+  { name: "st.jodern Kellerei", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/VmUdgRochvopTvdm.png" },
+  { name: "Edgewind", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/hTWKJZdzSLjrBMDp.png" },
+  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/NlYPrcvYmzIrkWwR.png" },
+  { name: "Break", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/owSHBNdPDuRMNlPY.png" },
+  { name: "Bitlex", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/qfLGXdXJnFdFghwq.png" },
+  { name: "Computrade", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/tMdkEsrdrnBVfbnU.png" },
+  { name: "Nexsolve", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/zDNGSxJFmJRfpVcu.png" },
+  { name: "8Horses", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ZzoGqTnqdPZBRYag.png" },
 ];
 
 const testimonials = [

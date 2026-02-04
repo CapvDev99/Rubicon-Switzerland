@@ -75,11 +75,12 @@ const techPartners = [
 
 // Delivery Partners
 const deliveryPartners = [
-  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ePrQlkZkwOdxkUDC.png" },
-  { name: "Break", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/uuBZMJDNaOygGOAI.png" },
-  { name: "Bitlex", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/aAiXnONnwBRzmjFR.png" },
-  { name: "Compu-Trade", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/pUdrVNjzqMPspCSW.png" },
-  { name: "Nexsolve", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/EXEqBeHkuflNvnJB.png" },
+  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/NlYPrcvYmzIrkWwR.png" },
+  { name: "Break", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/owSHBNdPDuRMNlPY.png" },
+  { name: "Bitlex", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/qfLGXdXJnFdFghwq.png" },
+  { name: "Compu-Trade", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/tMdkEsrdrnBVfbnU.png" },
+  { name: "Nexsolve", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/zDNGSxJFmJRfpVcu.png" },
+  { name: "Nablify", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/wifQhTQOGtDQYfmJ.png" },
 ];
 
 const capabilities = [
@@ -272,7 +273,7 @@ export default function Partner() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"
           >
             {deliveryPartners.map((partner) => (
               <motion.div
