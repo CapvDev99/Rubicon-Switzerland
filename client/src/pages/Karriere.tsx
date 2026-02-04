@@ -87,10 +87,7 @@ export default function Karriere() {
               Werde Teil eines Teams, das Schweizer Qualität mit modernsten Technologien 
               verbindet. Bei uns arbeitest du an spannenden Projekten für führende Unternehmen.
             </p>
-            <a href="#stellen" className="btn-primary inline-flex items-center gap-2">
-              Offene Stellen
-              <ArrowRight className="w-4 h-4" />
-            </a>
+
           </motion.div>
         </div>
       </section>

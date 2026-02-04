@@ -11,7 +11,11 @@ import {
   Lightbulb,
   Rocket,
   Settings,
-  HeadphonesIcon
+  HeadphonesIcon,
+  Calendar,
+  Mail,
+  MessageCircle,
+  ExternalLink
 } from "lucide-react";
 import { useState } from "react";
 
@@ -631,14 +635,39 @@ function VorsondierungSection() {
                 <h3 className="text-2xl font-bold text-[#090938] mb-4">
                   Vielen Dank für Ihre Angaben!
                 </h3>
-                <p className="text-gray-600 mb-8">
+                <p className="text-gray-600 mb-6">
                   Basierend auf Ihren Antworten empfehlen wir ein unverbindliches Gespräch, 
                   um Ihre spezifischen Anforderungen zu besprechen.
                 </p>
-                <Link href="/kontakt" className="btn-primary inline-flex items-center gap-2">
-                  Termin vereinbaren
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <p className="text-gray-500 text-sm mb-6">Wie möchten Sie uns kontaktieren?</p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="https://calendly.com/rubicon-world-info" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn-primary inline-flex items-center justify-center gap-2"
+                  >
+                    <Calendar className="w-4 h-4" />
+                    Termin buchen
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                  <a 
+                    href="mailto:info@rubicon-world.ch" 
+                    className="px-6 py-3 rounded-xl border-2 border-[#090938] text-[#090938] font-semibold hover:bg-[#090938] hover:text-white transition-all inline-flex items-center justify-center gap-2"
+                  >
+                    <Mail className="w-4 h-4" />
+                    E-Mail schreiben
+                  </a>
+                  <a 
+                    href="https://wa.me/41793643695?text=Hallo%20Rubicon%20Team%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Dienstleistungen." 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 rounded-xl bg-[#25D366] text-white font-semibold hover:bg-[#128C7E] transition-all inline-flex items-center justify-center gap-2"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    WhatsApp
+                  </a>
+                </div>
               </div>
             )}
 
