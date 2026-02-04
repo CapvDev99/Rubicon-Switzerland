@@ -480,7 +480,7 @@ function TechPartnersSection() {
         >
           <span className="badge-cyan inline-block mb-4">Technologie</span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#090938] mb-4">
-            Offizielle Partnerschaften
+            Technologien
           </h2>
           <p className="text-gray-600 text-lg">
             Wir arbeiten mit den führenden Technologieanbietern zusammen, um Ihnen die besten Lösungen zu bieten.
