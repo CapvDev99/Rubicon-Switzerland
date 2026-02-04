@@ -75,7 +75,11 @@ const techPartners = [
 
 // Delivery Partners
 const deliveryPartners = [
-  { name: "8Horses", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/SIqztKXypHvEuYjb.png" },
+  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ePrQlkZkwOdxkUDC.png" },
+  { name: "Break", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/uuBZMJDNaOygGOAI.png" },
+  { name: "Bitlex", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/aAiXnONnwBRzmjFR.png" },
+  { name: "Compu-Trade", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/pUdrVNjzqMPspCSW.png" },
+  { name: "Nexsolve", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/EXEqBeHkuflNvnJB.png" },
 ];
 
 const capabilities = [
@@ -267,20 +271,21 @@ export default function Partner() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInUp}
-            className="flex justify-center"
+            variants={staggerContainer}
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
           >
             {deliveryPartners.map((partner) => (
-              <div
+              <motion.div
                 key={partner.name}
-                className="bg-gray-50 rounded-xl p-8 flex items-center justify-center"
+                variants={fadeInUp}
+                className="bg-gray-50 rounded-xl p-6 flex items-center justify-center h-24"
               >
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-16 object-contain"
+                  className="max-h-16 max-w-full object-contain"
                 />
-              </div>
+              </motion.div>
             ))}
           </motion.div>
 
