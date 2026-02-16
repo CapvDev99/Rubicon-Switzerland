@@ -17,32 +17,32 @@ import {
   MessageCircle,
   ExternalLink
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // CDN URLs
-const HERO_VIDEO = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ZSzcVvijoHeZmzKx.mp4";
-const TEAM_WORKSHOP_1 = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bIIvLdOddthIAPUO.png";
-const ABSTRACT_PATTERN = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/SQizwhaNiIASzgHd.png";
+const HERO_VIDEO = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/pToeNJOmDrmsUOKt.mp4";
+const TEAM_WORKSHOP_1 = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/udkfhiyYmraFvVnS.png";
+const ABSTRACT_PATTERN = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/yCKkRsiorOJMQZsn.png";
 
 // Tech Partner Logos
 const TECH_PARTNERS = [
-  { name: "AWS", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/HQqisWpYqueNfgre.png" },
-  { name: "Azure", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/XiyRrzbcCScUJAbW.png" },
-  { name: "GCP", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/KTQDxNIqEIRQGpzs.png" },
-  { name: "Databricks", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/NPsSkdNcSzZiYHLZ.png" },
-  { name: "Snowflake", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bOUDiCISWCYyDbOQ.png" },
-  { name: "Power BI", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/LtlOMrpXinDhEBOn.png" },
-  { name: "MS Fabric", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/pfcBjgKzBcbjSpqi.png" },
+  { name: "AWS", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bSgjhUAEKaFHavke.png" },
+  { name: "Azure", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/diRMTwDGzMoAqPqe.png" },
+  { name: "GCP", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/vEUCxKkpHFKErSoX.png" },
+  { name: "Databricks", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/mjspwdUCweWhUfVD.png" },
+  { name: "Snowflake", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/igwFCnQsHSfBkpdz.png" },
+  { name: "Power BI", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/FXuPdIGcewzrAeBu.png" },
+  { name: "MS Fabric", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/fstRQnrToypEnJmG.png" },
 ];
 
 // Client Logos - Auswahl für die Startseite
 const CLIENT_LOGOS = [
-  { name: "Post", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/ruJmIbKgKWDpwnIc.png" },
-  { name: "hwz", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/BcdLIJQvZoxWfGhq.png" },
-  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/NlYPrcvYmzIrkWwR.png" },
-  { name: "Omnisens", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bwArFvyGRqsnkGuL.png" },
-  { name: "Bridge", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/jgBtnbfLeuUHvcYe.png" },
-  { name: "capvero", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/BGkleQWZWLRNRjgm.png" },
+  { name: "Post", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/OGfUjrTuSRChgOLV.png" },
+  { name: "hwz", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/CMfaMtLeXFnQrudr.png" },
+  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/XnSRBLCtMltkidqS.png" },
+  { name: "Omnisens", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/YRZZVcPixxnJwfNc.png" },
+  { name: "Bridge", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/SueSWZkkoCWynrmB.png" },
+  { name: "capvero", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/HroUiQhKpfRXNNtN.png" },
 ];
 
 // Animation variants
@@ -61,16 +61,55 @@ const staggerContainer = {
 
 // Hero Section
 function HeroSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoFailed, setVideoFailed] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Try to play video programmatically (Safari/Mobile fix)
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Autoplay was prevented - show fallback image
+        setVideoFailed(true);
+      });
+    }
+
+    // Also listen for stall/suspend events (Safari stops video)
+    const handleStall = () => {
+      video.play().catch(() => setVideoFailed(true));
+    };
+    video.addEventListener('suspend', handleStall);
+    video.addEventListener('stalled', handleStall);
+
+    return () => {
+      video.removeEventListener('suspend', handleStall);
+      video.removeEventListener('stalled', handleStall);
+    };
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Video Background */}
+      {/* Video Background with Fallback */}
       <div className="absolute inset-0 z-0">
+        {/* Fallback Image - always present behind video */}
+        <img
+          src={TEAM_WORKSHOP_1}
+          alt=""
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${videoFailed ? 'opacity-100' : 'opacity-0'}`}
+        />
+        {/* Video - hidden on small screens where autoplay is blocked */}
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          preload="auto"
+          className={`w-full h-full object-cover ${videoFailed ? 'hidden' : ''}`}
+          onError={() => setVideoFailed(true)}
         >
           <source src={HERO_VIDEO} type="video/mp4" />
         </video>

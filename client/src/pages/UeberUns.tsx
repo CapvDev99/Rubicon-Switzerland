@@ -3,8 +3,8 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Users, Target, Heart, Shield, Zap } from "lucide-react";
 
-const TEAM_WORKSHOP = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bIIvLdOddthIAPUO.png";
-const TEAM_WORKSHOP_2 = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/BNNfMPsPzYefTvwK.png";
+const TEAM_WORKSHOP = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/udkfhiyYmraFvVnS.png";
+const TEAM_WORKSHOP_2 = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/cktVHaGXHruOwuZI.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },

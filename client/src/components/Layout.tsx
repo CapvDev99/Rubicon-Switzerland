@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bVBNCxOsDYFxBXFN.png";
-const LOGO_WHITE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bVBNCxOsDYFxBXFN.png";
+const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/TNFaDvxbtmFbLJXq.png";
+const LOGO_WHITE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/TNFaDvxbtmFbLJXq.png";
 
 const navItems = [
   { label: "Home", href: "/" },

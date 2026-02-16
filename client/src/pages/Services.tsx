@@ -15,7 +15,7 @@ import {
   Shield
 } from "lucide-react";
 
-const TEAM_WORKSHOP_2 = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/BNNfMPsPzYefTvwK.png";
+const TEAM_WORKSHOP_2 = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/cktVHaGXHruOwuZI.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },

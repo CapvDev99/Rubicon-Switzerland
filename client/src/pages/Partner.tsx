@@ -17,56 +17,56 @@ const staggerContainer = {
 const techPartners = [
   {
     name: "AWS",
-    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/HQqisWpYqueNfgre.png",
+    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bSgjhUAEKaFHavke.png",
     description: "Amazon Web Services Partner für Cloud-Infrastruktur und Managed Services",
     certifications: ["AWS Partner", "Well-Architected"],
     color: "#FF9900"
   },
   {
     name: "Microsoft Azure",
-    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/XiyRrzbcCScUJAbW.png",
+    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/diRMTwDGzMoAqPqe.png",
     description: "Microsoft Partner für Azure Cloud, Microsoft 365 und Power Platform",
     certifications: ["Azure Partner", "Power Platform"],
     color: "#0078D4"
   },
   {
     name: "Google Cloud",
-    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/KTQDxNIqEIRQGpzs.png",
+    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/vEUCxKkpHFKErSoX.png",
     description: "Google Cloud Partner für BigQuery, Vertex AI und Cloud-Native Lösungen",
     certifications: ["GCP Partner", "Data Analytics"],
     color: "#4285F4"
   },
   {
     name: "Databricks",
-    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/NPsSkdNcSzZiYHLZ.png",
+    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/mjspwdUCweWhUfVD.png",
     description: "Databricks Partner für Lakehouse-Architekturen und ML/AI Workloads",
     certifications: ["Databricks Partner"],
     color: "#FF3621"
   },
   {
     name: "Snowflake",
-    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bOUDiCISWCYyDbOQ.png",
+    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/igwFCnQsHSfBkpdz.png",
     description: "Snowflake Partner für Data Warehousing und Data Sharing",
     certifications: ["Snowflake Partner"],
     color: "#29B5E8"
   },
   {
     name: "Power BI",
-    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/LtlOMrpXinDhEBOn.png",
+    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/FXuPdIGcewzrAeBu.png",
     description: "Microsoft Power BI Expertise für Business Intelligence und Reporting",
     certifications: ["Power BI Specialist"],
     color: "#F2C811"
   },
   {
     name: "Power Apps",
-    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/AxREuVGVibPNNKMD.png",
+    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/BtkEqfkOgzmNBgUo.png",
     description: "Low-Code Entwicklung mit Microsoft Power Apps und Power Automate",
     certifications: ["Power Platform"],
     color: "#742774"
   },
   {
     name: "Microsoft Fabric",
-    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/pfcBjgKzBcbjSpqi.png",
+    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/fstRQnrToypEnJmG.png",
     description: "End-to-End Analytics mit Microsoft Fabric und OneLake",
     certifications: ["Fabric Specialist"],
     color: "#0078D4"
@@ -75,12 +75,12 @@ const techPartners = [
 
 // Delivery Partners
 const deliveryPartners = [
-  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/NlYPrcvYmzIrkWwR.png", darkBg: false },
-  { name: "Break", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/owSHBNdPDuRMNlPY.png", darkBg: true },
-  { name: "Bitlex", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/qfLGXdXJnFdFghwq.png", darkBg: true },
-  { name: "Compu-Trade", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/tMdkEsrdrnBVfbnU.png", darkBg: false },
-  { name: "Nexsolve", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/zDNGSxJFmJRfpVcu.png", darkBg: true },
-  { name: "Nablify", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/wifQhTQOGtDQYfmJ.png", darkBg: false },
+  { name: "Begasoft", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/tCxetmZAVJRJqBQa.png", darkBg: false },
+  { name: "Break", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/AMrzsnZxVRgfkXeb.png", darkBg: true },
+  { name: "Bitlex", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/gjtKoGaUluxRFGmM.png", darkBg: true },
+  { name: "Compu-Trade", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/EQZdlCnLHduMNJWY.png", darkBg: false },
+  { name: "Nexsolve", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/gsXkIYOBjjJKxaPV.png", darkBg: true },
+  { name: "Nablify", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/EljQxQNeKDpTrqHa.png", darkBg: false },
 ];
 
 const capabilities = [

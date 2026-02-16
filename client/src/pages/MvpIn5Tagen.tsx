@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-const TEAM_WORKSHOP = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/bIIvLdOddthIAPUO.png";
+const TEAM_WORKSHOP = "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/udkfhiyYmraFvVnS.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
