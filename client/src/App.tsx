@@ -17,6 +17,7 @@ import Kontakt from "./pages/Kontakt";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import WhatsAppButton from "./components/WhatsAppButton";
+import CookieConsent from "./components/CookieConsent";
 
 function AppRouter() {
   return (
@@ -47,6 +48,7 @@ function App() {
             <Toaster />
             <AppRouter />
             <WhatsAppButton />
+            <CookieConsent />
           </WouterRouter>
         </TooltipProvider>
       </ThemeProvider>
