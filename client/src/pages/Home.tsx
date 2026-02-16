@@ -68,25 +68,69 @@ function HeroSection() {
     const video = videoRef.current;
     if (!video) return;
 
-    // Try to play video programmatically (Safari/Mobile fix)
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        // Autoplay was prevented - show fallback image
-        setVideoFailed(true);
-      });
-    }
-
-    // Also listen for stall/suspend events (Safari stops video)
-    const handleStall = () => {
-      video.play().catch(() => setVideoFailed(true));
+    // Ensure seamless looping
+    const tryPlay = () => {
+      const p = video.play();
+      if (p !== undefined) {
+        p.catch(() => setVideoFailed(true));
+      }
     };
+
+    // Initial play attempt
+    tryPlay();
+
+    // Fallback loop: if browser drops the loop attribute, restart manually
+    const handleEnded = () => {
+      video.currentTime = 0;
+      tryPlay();
+    };
+
+    // Safari sometimes pauses the video when tab is backgrounded or after suspend
+    const handlePause = () => {
+      // Only resume if the video wasn't intentionally paused (i.e. still in viewport)
+      if (!document.hidden) {
+        setTimeout(() => {
+          if (video.paused && !document.hidden) {
+            tryPlay();
+          }
+        }, 100);
+      }
+    };
+
+    // Resume playback when tab becomes visible again
+    const handleVisibility = () => {
+      if (!document.hidden && video.paused) {
+        video.currentTime = video.currentTime; // Force buffer refresh
+        tryPlay();
+      }
+    };
+
+    // Resume if video stalls or gets suspended (Safari CDN issue)
+    const handleStall = () => {
+      tryPlay();
+    };
+
+    // Restart on waiting (buffering) to prevent freeze
+    const handleWaiting = () => {
+      setTimeout(() => {
+        if (video.paused) tryPlay();
+      }, 500);
+    };
+
+    video.addEventListener('ended', handleEnded);
+    video.addEventListener('pause', handlePause);
     video.addEventListener('suspend', handleStall);
     video.addEventListener('stalled', handleStall);
+    video.addEventListener('waiting', handleWaiting);
+    document.addEventListener('visibilitychange', handleVisibility);
 
     return () => {
+      video.removeEventListener('ended', handleEnded);
+      video.removeEventListener('pause', handlePause);
       video.removeEventListener('suspend', handleStall);
       video.removeEventListener('stalled', handleStall);
+      video.removeEventListener('waiting', handleWaiting);
+      document.removeEventListener('visibilitychange', handleVisibility);
     };
   }, []);
 
